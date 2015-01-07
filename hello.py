@@ -9,14 +9,18 @@ drops = {}
 def hello():
     return 'Hello World!'
 
-@app.route('/data', method=("POST",))
-def post_data():
-	if not request.json or not 'title' in request.json:
-		abort(400)
-	drops[request.json['location']] = request.json['string']
-	
-	return "ty 4 data"
+# @app.route('/data', method=("POST",))
+# def post_data():
+# 	if not request.json or not 'title' in request.json:
+# 		abort(400)
+# 	drops[request.json['location']] = request.json['string']
 
-@app.route('/data', method=("GET",))
-def get_data():
-	return jsonify(drops)
+# 	return "ty 4 data"
+
+# @app.route('/data', method=("GET",))
+# def get_data():
+# 	return jsonify(drops)
+
+
+# if __name__ == '__main__':
+#     app.run()
