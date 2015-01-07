@@ -11,8 +11,10 @@ def hello():
 
 @app.route('/data', methods=['POST'])
 def post_data():
-	request.
-	return ""
+	title = request.json['title']
+	text = request.json['text']
+	drops[title] = text
+	return "ty 4 data"
 @app.route('/get', methods=['GET'])
 def get_data():
 	return jsonify(drops)
