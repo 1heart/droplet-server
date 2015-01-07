@@ -1,26 +1,21 @@
 import os
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
-drops = {}
+drops = {'lol': 'lol'}
 
 @app.route('/')
 def hello():
     return 'Hello World!'
 
-# @app.route('/data', method=("POST",))
-# def post_data():
-# 	if not request.json or not 'title' in request.json:
-# 		abort(400)
-# 	drops[request.json['location']] = request.json['string']
-
-# 	return "ty 4 data"
-
-# @app.route('/data', method=("GET",))
-# def get_data():
-# 	return jsonify(drops)
-
+@app.route('/data', methods=['POST'])
+def post_data():
+	request.
+	return ""
+@app.route('/get', methods=['GET'])
+def get_data():
+	return jsonify(drops)
 
 # if __name__ == '__main__':
 #     app.run()
