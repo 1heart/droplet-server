@@ -13,14 +13,25 @@ def hello():
 def post_data():
 	drop = {}
 	try:
-		drop[title] = request.json['title']
 		drop[user] = request.json['user']
+	except:
+		return "user value DNE"
+	try:
 		drop[text] = request.json['text']
+	except:
+		return "text value DNE"
+	try:
 		drop[lat] = request.json['lat']
+	except:
+		return "lat value DNE"
+	try:
 		drop[longi] = request.json['longi']
+	except:
+		return "longi value DNE"
+	try:
 		drop[score] = request.json['score']
 	except:
-		return "not all values were correct"
+		return "score value DNE"
 	drops.append(drop)
 	return "ty 4 data"
 
