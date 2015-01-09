@@ -1,5 +1,6 @@
 import os
 from flask import Flask, jsonify, request
+import json
 
 app = Flask(__name__)
 
@@ -37,7 +38,7 @@ def post_data():
 
 @app.route('/get', methods=['GET'])
 def get_data():
-	return jsonify(drops)
+	return json.dumps(drops)
 
 # if __name__ == '__main__':
 #     app.run()
