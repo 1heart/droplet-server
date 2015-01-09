@@ -28,5 +28,5 @@ def post_data():
 def get_data():
 	return jsonify(drops)
 
-if __name__ == '__main__':
-    app.run()
+# if __name__ == '__main__':
+#     app.run()
